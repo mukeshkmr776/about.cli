@@ -1,8 +1,8 @@
 # ABOUT.CLI
 Self learning project to implement terminal kind of profile.
 
-# Live Demo
-https://mukeshkmr776.github.io/about.cli/
+# Live Demo (only for desktop view)
+Click here --> https://mukeshkmr776.github.io/about.cli/
 
 # Development
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
