@@ -18,6 +18,8 @@ export class AppComponent implements AfterViewInit, OnDestroy {
 
   @ViewChild('container') private containerRef: ElementRef;
 
+  blinkingFinger = true;
+
   cursor = true;
   interval = null;
   ctx = {cursor: true};
@@ -155,7 +157,10 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     this.interval = setInterval(() => {
       this.cursor = !this.cursor;
-   }, 400);
+    }, 400);
+    setInterval(() => {
+      this.blinkingFinger = !this.blinkingFinger;
+    }, 350);
   }
 
   ngOnDestroy() {
