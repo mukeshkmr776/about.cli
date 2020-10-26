@@ -1,0 +1,134 @@
+:host {
+    font-family: monospace, "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    display: block;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.terminal {
+    position: relative;
+    // width: 80%;
+    min-width: 700px;
+    max-width: 700px;
+    min-height: 300px;
+    max-height: 300px;
+    border-radius: 6px;
+    padding: 45px 6px 0px;
+    // margin: auto;
+    overflow: hidden;
+    color: white;
+    white-space: pre;
+    // transform: translateY(50%);
+    background-color: rgb(15, 15, 16);
+
+
+
+    &::before {
+        content: "\2022 \2022 \2022";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 4px;
+        background: rgb(58, 58, 58);
+        color: whitesmoke;
+        width: 100%;
+        font-size: 2rem;
+        line-height: 0;
+        padding: 14px 0;
+        text-indent: 4px;
+    }
+
+    pre {
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+        color: white;
+        padding: 0 1rem 1rem;
+        margin: 0;
+    }
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+    .terminal {
+        width: 100%;
+    }
+}
+
+.container {
+    overflow-y: auto;
+    max-height: 280px;
+    &::before {
+        content: "command prompt";
+        position: absolute;
+        top: 0;
+        left: 35%;
+        height: 4px;
+        text-align: center;
+        background: rgb(58, 58, 58);
+        color: whitesmoke;
+        width: 200px;
+        font-size: 1.1rem;
+        line-height: 0;
+        padding: 14px 0;
+        text-indent: 4px;
+    }
+}
+
+.prompt {
+    color: #1fbe1f;
+    padding-right: 3px;
+}
+
+.inputbox {
+    padding-left: 0px;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.help {
+    text-align: center;
+    color: white;
+    margin: 15px 0;
+}
+
+#cursor {
+    cursor: default;
+    font-size: 14px;
+    width: 10px;
+    background-color: white;
+
+    position: relative;
+    top: .5px;
+    left: 0px;
+
+    -webkit-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: black;
+    }
+}
+
+@-webkit-keyframes blink {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: black;
+    }
+}

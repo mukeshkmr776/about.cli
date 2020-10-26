@@ -1,0 +1,34 @@
+
+<div class="d-flex">
+
+  <!-- Terminal -->
+  <div class="terminal">
+    <div class="container" #container [ngStyle]="{'overflow': historyTable.length > MAX_HISTORYTABLE_LENGTH ? 'auto' : 'hidden'}">
+      <!-- History Table -->
+      <ng-template ngFor let-history [ngForOf]="historyTable" let-i="index">
+        <ng-container *ngTemplateOutlet="cursorTemplate; context: {typeValue: history.type, cursorVisible: false, displayValue: false, inputValue: history.value}"></ng-container>
+      </ng-template>
+
+      <!-- New Blinking Input Line -->
+      <ng-container *ngTemplateOutlet="cursorTemplate; context: {typeValue: 'command', cursorVisible: cursor, displayValue: true, inputValue: input}"> </ng-container>
+    </div>
+  </div>
+
+  <!-- Help -->
+  <div class="help">
+    Type 'help'
+  </div>
+
+</div>
+
+
+<!-- Terminal Line Template -->
+<ng-template #cursorTemplate let-cursorVisible="cursorVisible" let-typeValue="typeValue" let-displayValue="displayValue" let-inputValue="inputValue">
+  <div>
+    <span class="prompt" *ngIf="typeValue === 'command'">{{ PROMPT }}</span>
+    <span class="inputbox">{{inputValue}}</span>
+    <span id="cursor" *ngIf="!!displayValue" [ngStyle]="{'visibility': cursorVisible ? 'visible' : 'hidden'}">&nbsp;</span>
+  </div>
+</ng-template>
+
+<!-- <router-outlet></router-outlet> -->
