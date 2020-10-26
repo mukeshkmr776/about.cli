@@ -1,27 +1,19 @@
-# CliUi
+# ABOUT.CLI
+Self learning project to implement terminal kind of profile.
 
+# Live Demo
+https://mukeshkmr776.github.io/about.cli/
+
+# Development
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
 
-## Development server
+# To Run locally
+npm i -g @angular/cli
+npm install
+ng serve
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# To deploy on GitHub Pages
+npm run deploy
 
-## Code scaffolding
+(Note: Make sure to change repository name in package.json in field "deploy". For more information, read document [angular-cli-ghpages](https://www.npmjs.com/package/angular-cli-ghpages))
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
