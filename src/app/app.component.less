@@ -17,11 +17,12 @@
     min-height: 300px;
     max-height: 300px;
     border-radius: 6px;
-    padding: 45px 6px 0px;
+    padding: 45px 6px 0;
     // margin: auto;
     overflow: hidden;
     color: white;
     white-space: pre;
+    zoom: 1.05;
     // transform: translateY(50%);
     background-color: rgb(15, 15, 16);
 
@@ -71,7 +72,7 @@
         background: rgb(58, 58, 58);
         color: whitesmoke;
         width: 200px;
-        font-size: 1.1rem;
+        font-size: .9rem;
         line-height: 0;
         padding: 14px 0;
         text-indent: 4px;
@@ -84,7 +85,7 @@
 }
 
 .inputbox {
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 .d-flex {
@@ -112,6 +113,7 @@
     flex-direction: column;
 }
 
+
 #cursor {
     cursor: default;
     font-size: 14px;
@@ -120,7 +122,7 @@
 
     position: relative;
     top: .5px;
-    left: 0px;
+    left: 0;
 
     -webkit-animation: 1s blink step-end infinite;
     animation: 1s blink step-end infinite;
@@ -142,4 +144,15 @@
     50% {
         color: black;
     }
+}
+
+.drag-point {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    color: #ccc;
+    cursor: move;
+    width: 22px;
+    height: 25px;
+    zoom: .8;
 }

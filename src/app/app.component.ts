@@ -35,10 +35,18 @@ export class AppComponent implements AfterViewInit, OnDestroy {
 
 
   ITEMS_CONTENT = {
-    'about.txt': 'hello world :)',
-    'skills.txt': 'Node.js    Angular    Cloud    WebSocket',
-    'links.txt': 'https://github.com/mukeshkmr776',
-    'projects.txt': ['MicrosoftAzure (DataFactory) - 5 Months', 'IBM PowerHA - 4 Years', 'IBM VMRestart - 6 Months', 'IBM Storwize - 7 Months', 'Self learning - infinity']
+    'about.txt'    : 'this is about.cli ',
+    'profile.txt'  : 'hello, i am mukki :)',
+    'skills.txt'   : 'Node.js    Angular    Cloud    WebSocket',
+    'links.txt'    : [
+                      'Phone    - +91-9911068568',  'GitHub   - https://linkedin.com/in/mukeshkmr776',
+                      'LinkedIn - https://github.com/mukeshkmr776'
+                    ],
+    'projects.txt' : [
+                      'MicrosoftAzure (DataFactory) - 5 Months',
+                      'IBM PowerHA - 4 Years', 'IBM VMRestart - 6 Months',
+                      'IBM Storwize - 7 Months', 'Self learning - infinity'
+                    ]
   }
   ITEMS = Object.keys(this.ITEMS_CONTENT);
 

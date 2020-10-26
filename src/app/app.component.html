@@ -2,16 +2,26 @@
 <div class="d-flex">
 
   <!-- Terminal -->
-  <div class="terminal">
+  <div class="terminal" cdkDrag cdkDragBoundary="body">
+
+    <!-- Drag Point -->
+    <div class="drag-point" cdkDragHandle>
+      <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"></path>
+        <path d="M0 0h24v24H0z" fill="none"></path>
+      </svg>
+    </div>
+
     <div class="container" #container [ngStyle]="{'overflow': historyTable.length > MAX_HISTORYTABLE_LENGTH ? 'auto' : 'hidden'}">
       <!-- History Table -->
-      <ng-template ngFor let-history [ngForOf]="historyTable" let-i="index">
+      <ng-template ngFor let-history [ngForOf]="historyTable">
         <ng-container *ngTemplateOutlet="cursorTemplate; context: {typeValue: history.type, cursorVisible: false, displayValue: false, inputValue: history.value}"></ng-container>
       </ng-template>
 
       <!-- New Blinking Input Line -->
       <ng-container *ngTemplateOutlet="cursorTemplate; context: {typeValue: 'command', cursorVisible: cursor, displayValue: true, inputValue: input}"> </ng-container>
     </div>
+
   </div>
 
   <!-- Help -->
@@ -23,13 +33,12 @@
   <div class="logos">
     <br>
     <a href="https://github.com/mukeshkmr776/about.cli" target="blank">
-      <img alt="GitHub Logo" src="assets/images/GitHub-logo.png" width="30" height="30" title="GitHub Link" />
+      <img alt="GitHub Logo" src="assets/images/GitHub-logo.png" width="30" height="30"/>
     </a>
     <div>Made with ❤️ by Mukki&nbsp;</div>
   </div>
 
 </div>
-
 
 <!-- Terminal Line Template -->
 <ng-template #cursorTemplate let-cursorVisible="cursorVisible" let-typeValue="typeValue" let-displayValue="displayValue" let-inputValue="inputValue">

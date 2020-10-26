@@ -1,11 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 100%;
+}
+
 body {
-    zoom: 1.05;
+    font-family: monospace, "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 14px;
     height: 100vh;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
-    background-color: #9f1f80;
+    background-color: #c21963;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 * {
@@ -23,14 +31,14 @@ body {
  
 /* Track */
 ::-webkit-scrollbar-track {
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
+    -webkit-border-radius: 0;
+    border-radius: 0;
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
+    -webkit-border-radius: 0;
+    border-radius: 0;
     background: lightgray; 
 }
 ::-webkit-scrollbar-thumb:window-inactive {
